@@ -1093,6 +1093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneIcosahedron
       objectReference: {fileID: 0}
+    - target: {fileID: 3673385814479187501, guid: 975bcaf61a9872e488aa68d572fd4fb4, type: 3}
+      propertyPath: _constraints.MaxScale.Value
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9007023290955525149, guid: 975bcaf61a9872e488aa68d572fd4fb4, type: 3}
       propertyPath: m_RootOrder
       value: 17
