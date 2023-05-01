@@ -5,10 +5,13 @@ using UnityEngine;
 public class CycleThroughObjects : MonoBehaviour
 {
     public GameObject[] prefabs;
+    public GameObject objectPlacement;
 
-    int currentIndex;
+    private Vector3 placement;
+    private int currentIndex;
     private void Start()
     {
+        placement = objectPlacement.transform.position;
         for (int i = 0; i < prefabs.Length; i++)
         {
             currentIndex = i;
@@ -42,5 +45,6 @@ public class CycleThroughObjects : MonoBehaviour
     void TurnOn(GameObject g)
     {
         g.SetActive(true);
+        g.transform.position = placement;
     }
 }
