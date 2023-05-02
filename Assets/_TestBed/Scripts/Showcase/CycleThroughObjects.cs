@@ -21,12 +21,28 @@ public class CycleThroughObjects : MonoBehaviour
         TurnOn(prefabs[currentIndex]);
     }
 
-    public void ChangeObject()
+    public void ChangeObjectForward()
     {
         if (currentIndex < prefabs.Length - 1)
         {
             TurnOff(prefabs[currentIndex]);
             currentIndex++;
+            TurnOn(prefabs[currentIndex]);
+        }
+        else
+        {
+            TurnOff(prefabs[currentIndex]);
+            currentIndex = 0;
+            TurnOn(prefabs[currentIndex]);
+        }
+    }
+
+    public void ChangeObjectBackward()
+    {
+        if(currentIndex < prefabs.Length - 1)
+        {
+            TurnOff(prefabs[currentIndex]);
+            currentIndex--;
             TurnOn(prefabs[currentIndex]);
         }
         else
