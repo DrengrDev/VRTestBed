@@ -7,7 +7,10 @@ public class CycleThroughObjects : MonoBehaviour
     public GameObject[] prefabs;
     public GameObject objectPlacement;
 
+    public float rotationSpeed = 10f;
+
     private Vector3 placement;
+    private GameObject currentObject;
     private int currentIndex;
     private void Start()
     {
@@ -21,17 +24,22 @@ public class CycleThroughObjects : MonoBehaviour
         TurnOn(prefabs[currentIndex]);
     }
 
+    private void Update()
+    {
+        RotateObject(currentObject);
+    }
+
     public void ChangeObjectForward()
     {
         if (currentIndex < prefabs.Length - 1)
         {
-            TurnOff(prefabs[currentIndex]);
+            TurnOff(currentObject);
             currentIndex++;
             TurnOn(prefabs[currentIndex]);
         }
         else
         {
-            TurnOff(prefabs[currentIndex]);
+            TurnOff(currentObject);
             currentIndex = 0;
             TurnOn(prefabs[currentIndex]);
         }
@@ -39,16 +47,16 @@ public class CycleThroughObjects : MonoBehaviour
 
     public void ChangeObjectBackward()
     {
-        if(currentIndex < prefabs.Length - 1)
+        if(currentIndex > 0)
         {
-            TurnOff(prefabs[currentIndex]);
+            TurnOff(currentObject);
             currentIndex--;
             TurnOn(prefabs[currentIndex]);
         }
         else
         {
-            TurnOff(prefabs[currentIndex]);
-            currentIndex = 0;
+            TurnOff(currentObject);
+            currentIndex = prefabs.Length -1;
             TurnOn(prefabs[currentIndex]);
         }
     }
@@ -62,5 +70,13 @@ public class CycleThroughObjects : MonoBehaviour
     {
         g.SetActive(true);
         g.transform.position = placement;
+        currentObject = g;
+    }
+
+    void RotateObject(GameObject g)
+    {
+        float rotSpeed = rotationSpeed * Time.deltaTime;
+        Vector3 rotation = new Vector3(rotSpeed, 0f, 0f);
+        g.transform.Rotate(rotation);
     }
 }
