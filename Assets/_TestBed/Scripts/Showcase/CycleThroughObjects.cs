@@ -56,7 +56,7 @@ public class CycleThroughObjects : MonoBehaviour
         else
         {
             TurnOff(currentObject);
-            currentIndex = prefabs.Length -1;
+            currentIndex = prefabs.Length - 1;
             TurnOn(prefabs[currentIndex]);
         }
     }
@@ -76,7 +76,7 @@ public class CycleThroughObjects : MonoBehaviour
     void RotateObject(GameObject g)
     {
         float rotSpeed = rotationSpeed * Time.deltaTime;
-        Vector3 rotation = new Vector3(rotSpeed, 0f, 0f);
+        Vector3 rotation = new Vector3(0f, rotSpeed, 0f);
         g.transform.Rotate(rotation);
     }
 }
