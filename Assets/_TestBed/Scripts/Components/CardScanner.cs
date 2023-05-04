@@ -11,7 +11,6 @@ public class CardScanner : MonoBehaviour
     private UnityEvent _whenScanned = new UnityEvent();
     public UnityEvent WhenScanned => _whenScanned;
 
-    private float charge = 50.50f;
     private bool canDecrease = true;
 
     private void Start()
@@ -28,11 +27,16 @@ public class CardScanner : MonoBehaviour
         }
     }
 
+    IEnumerator WaitToCharge()
+    {
+        yield return new WaitForSeconds(2f);
+    }
+
     IEnumerator DelayedBalance(float delay)
     {
         canDecrease = false;
-        _whenScanned.Invoke();
         yield return new WaitForSeconds(delay);
+        _whenScanned.Invoke();
         canDecrease = true;
     }
 }
