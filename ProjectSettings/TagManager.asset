@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftHand
   - RightHand
+  - CardTrigger
   layers:
   - Default
   - TransparentFX

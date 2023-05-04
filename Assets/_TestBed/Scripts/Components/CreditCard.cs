@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CreditCard : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float cardBalance;
+    public TextMeshProUGUI balanceText;
+
+    private void Start()
     {
-        
+        balanceText.text = "$" + cardBalance.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        balanceText.text = "$" + cardBalance.ToString();
+    }
+
+    public void IncreaseBalance(float balanceDiff)
+    {
+        cardBalance += balanceDiff;
+    }
+
+    public void DecreaseBalance(float balanceDiff)
+    {
+        cardBalance -= balanceDiff;
     }
 }
