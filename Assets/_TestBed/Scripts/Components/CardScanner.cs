@@ -27,14 +27,10 @@ public class CardScanner : MonoBehaviour
         }
     }
 
-    IEnumerator WaitToCharge()
-    {
-        yield return new WaitForSeconds(2f);
-    }
-
     IEnumerator DelayedBalance(float delay)
     {
         canDecrease = false;
+        card.Fill();
         yield return new WaitForSeconds(delay);
         _whenScanned.Invoke();
         canDecrease = true;

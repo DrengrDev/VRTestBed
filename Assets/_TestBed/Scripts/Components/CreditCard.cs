@@ -10,10 +10,12 @@ public class CreditCard : MonoBehaviour
     public TextMeshProUGUI balanceText;
 
     private Image sprite;
+    private float fill = 0f;
 
     private void Start()
     {
         sprite = GetComponentInChildren<Image>();
+        sprite.fillAmount = fill;
         balanceText.text = "$" + cardBalance.ToString();
     }
 
@@ -46,5 +48,6 @@ public class CreditCard : MonoBehaviour
             sprite.fillAmount = time / fillTime;
             yield return null;
         }
+        sprite.fillAmount = fill;
     }
 }
