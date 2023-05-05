@@ -8,23 +8,22 @@ public class SlidingTextAnimation : MonoBehaviour
     public GameObject text;
     public float speed = 50f;
     public float startX = -500f;
-    public float startX1 = -500f;
-    public float startX2 = -500f;
     public float endX = 500f;
+
+    //public List<RectTransform> rectTrans = new List<RectTransform>(); 
 
     public RectTransform rectTransform1;
     public RectTransform rectTransform2;
     public RectTransform rectTransform3;
 
-    Vector2 currentPos1;
-    Vector2 currentPos2;
+    //Vector2 currentPos;
 
     //private float startTime;
 
     private void Start()
     {
        //rectTransform = GetComponent<RectTransform>();
-        rectTransform1.anchoredPosition = new Vector2(startX, rectTransform1.anchoredPosition.y);
+        //rectTransform1.anchoredPosition = new Vector2(startX, rectTransform1.anchoredPosition.y);
     }
 
     private void Update()
@@ -32,13 +31,12 @@ public class SlidingTextAnimation : MonoBehaviour
         RepositionText();
         RepositionText1();
         RepositionText2();
-
     }
 
     void RepositionText()
     {
         rectTransform1.anchoredPosition += new Vector2(speed * Time.deltaTime, 0);
-        if (rectTransform1.position.x > endX)
+        if (rectTransform1.anchoredPosition.x > endX)
         {
             rectTransform1.anchoredPosition = new Vector2(startX, rectTransform1.anchoredPosition.y);
         }
@@ -47,7 +45,7 @@ public class SlidingTextAnimation : MonoBehaviour
     void RepositionText1()
     {
         rectTransform2.anchoredPosition += new Vector2(speed * Time.deltaTime, 0);
-        if (rectTransform2.position.x > endX)
+        if (rectTransform2.anchoredPosition.x > endX)
         {
             rectTransform2.anchoredPosition = new Vector2(startX, rectTransform2.anchoredPosition.y);
         }
@@ -56,7 +54,7 @@ public class SlidingTextAnimation : MonoBehaviour
     void RepositionText2()
     {
         rectTransform3.anchoredPosition += new Vector2(speed * Time.deltaTime, 0);
-        if (rectTransform3.position.x > endX)
+        if (rectTransform3.anchoredPosition.x > endX)
         {
             rectTransform3.anchoredPosition = new Vector2(startX, rectTransform3.anchoredPosition.y);
         }
@@ -80,8 +78,16 @@ public class SlidingTextAnimation : MonoBehaviour
         rt.anchoredPosition = new Vector2(Mathf.Lerp(startX, endX, t), rt.anchoredPosition.y);
     }*/
 
-    private void OnDrawGizmos()
+    /*void MoveAll()
     {
-        Gizmos.color = Color.blue;
-    }
+            for (int i = 0; i < rectTrans.Count; i++)
+        {
+            currentPos = rectTrans[i].anchoredPosition;
+        }
+            currentPos += new Vector2(speed * Time.deltaTime, 0);
+            if (currentPos.x > endX)
+        {
+            currentPos = new Vector2(startX, currentPos.y);
+        }
+    }*/
 }
