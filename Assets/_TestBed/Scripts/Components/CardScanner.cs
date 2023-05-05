@@ -15,7 +15,7 @@ public class CardScanner : MonoBehaviour
 
     private void Start()
     {
-        //card = GetComponent<CreditCard>();
+        
     }
 
     private void OnTriggerEnter(Collider c)
@@ -23,7 +23,10 @@ public class CardScanner : MonoBehaviour
         bool isTag = c.gameObject.CompareTag("CardTrigger");
         if (c.gameObject.GetComponentInParent<CreditCard>() && isTag)
         {
-            if (canDecrease) StartCoroutine(DelayedBalance(5f));
+            if (canDecrease)
+            {
+                StartCoroutine(DelayedBalance(5f)); 
+            }
         }
     }
 

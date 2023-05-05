@@ -530,7 +530,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b5cae8158729b74438cc3590981b793a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2743,6 +2743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1731747519}
+  colliderTrigger: {fileID: 0}
   _whenScanned:
     m_PersistentCalls:
       m_Calls:
@@ -3946,8 +3947,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1075154874}
+  - component: {fileID: 1075154876}
   - component: {fileID: 1075154875}
-  - component: {fileID: 1075154878}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -3983,7 +3984,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1075154878
+--- !u!114 &1075154876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3996,6 +3997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1731747519}
+  colliderTrigger: {fileID: 1075154875}
   _whenScanned:
     m_PersistentCalls:
       m_Calls:
@@ -4281,7 +4283,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4d1238e5117938d478901129961c450d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
