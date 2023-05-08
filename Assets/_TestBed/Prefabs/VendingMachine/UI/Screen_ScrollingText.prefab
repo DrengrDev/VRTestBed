@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2342471274870036661}
   - component: {fileID: 1529806954010625387}
   m_Layer: 0
-  m_Name: Screen
+  m_Name: Screen_ScrollingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
