@@ -10,7 +10,11 @@ public class VendingMachineManager : MonoBehaviour
 
     public GameObject[] images;
 
+    public GameObject spawnArea;
+    public GameObject spawnObject;
+
     private GameObject selectedImage;
+
     private void Start()
     {
         credsText.text = "Available Balance: $" + availableCreds.ToString();
@@ -45,5 +49,19 @@ public class VendingMachineManager : MonoBehaviour
 
         selectedImage = images[index];
         selectedImage.SetActive(true);
+    }
+
+    public void SpawnObject()
+    {
+        Vector3 spawn = spawnArea.transform.position;
+        Instantiate(spawnObject, spawn, Quaternion.identity);
+
+        StartCoroutine(TurnOff(spawnObject));
+    }
+
+    IEnumerator TurnOff(GameObject g)
+    {
+        yield return new WaitForSeconds(2f);
+        g.gameObject.SetActive(false);
     }
 }
