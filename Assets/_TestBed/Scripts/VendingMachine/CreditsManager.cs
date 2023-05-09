@@ -18,8 +18,13 @@ public class CreditsManager : MonoBehaviour
         credsText.text = "Available Balance: $" + availableCreds.ToString();
     }
 
-    public void UpdateCredits(float value)
+    public void IncreaseCredits(float value)
     {
         availableCreds += value;
+    }
+
+    public void DecreaseCredits(float value)
+    {
+        availableCreds -= value;
     }
 }
