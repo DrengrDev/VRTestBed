@@ -299,7 +299,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19575811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -77}
+  m_LocalPosition: {x: 0, y: 0, z: -63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -691,7 +691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151705738}
   m_LocalRotation: {x: 0.00000046193594, y: 0.000002284147, z: 0.0000013187517, w: -1}
-  m_LocalPosition: {x: -0.0349, y: 1.4624, z: 1.0446}
+  m_LocalPosition: {x: -0.035, y: 1.541, z: 1.045}
   m_LocalScale: {x: 0.038937513, y: 0.038937513, z: 0.038937513}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6526,6 +6526,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 19575812}
     m_Modifications:
+    - target: {fileID: 756573636967329198, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 756573636967329198, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196597788113463668, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7475622471597304083, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: m_Name
       value: SelectedImage4
@@ -6630,10 +6642,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.8396226
       objectReference: {fileID: 0}
+    - target: {fileID: 7475622471597304085, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7475622471597304087, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: balance
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 7475622472357800679, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 380
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975597069087836760, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 38999e8c1ca66ff4299895bc46edbd75, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
 --- !u!224 &862403236 stripped
@@ -8453,7 +8477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.34901962}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9056,7 +9080,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vending Machine
+  m_text: NexStar Vending
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b8cab9a70d44c842b8841bc7d3c6349, type: 2}
   m_sharedMaterial: {fileID: 2843826697776605231, guid: 2b8cab9a70d44c842b8841bc7d3c6349, type: 2}
@@ -10365,13 +10389,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 19575812}
     m_Modifications:
+    - target: {fileID: 756573636967329198, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1400
+      objectReference: {fileID: 0}
+    - target: {fileID: 756573636967329198, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 756573636967329198, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 756573636967329198, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196597788113463668, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7475622471597304083, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: m_Name
       value: SelectedImage8
       objectReference: {fileID: 0}
     - target: {fileID: 7475622471597304083, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7475622471597304084, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: m_Pivot.x
@@ -10469,10 +10513,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.42889312
       objectReference: {fileID: 0}
+    - target: {fileID: 7475622471597304085, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7475622471597304087, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: balance
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7475622472357800679, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 408
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975597069087836760, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ac6d636b9a11df4d9b4379ab5023707, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
 --- !u!224 &1570101254 stripped
@@ -13083,7 +13139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vending Machine
+  m_text: NexStar Vending
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b8cab9a70d44c842b8841bc7d3c6349, type: 2}
   m_sharedMaterial: {fileID: 2843826697776605231, guid: 2b8cab9a70d44c842b8841bc7d3c6349, type: 2}
@@ -14500,7 +14556,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4414242e9b611004f9157494af0bbcc8, type: 2}
+  - {fileID: 2100000, guid: 5ec8fca39dadc5948bbd6df0ed35488a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15156,7 +15212,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4414242e9b611004f9157494af0bbcc8, type: 2}
+  - {fileID: 2100000, guid: 5ec8fca39dadc5948bbd6df0ed35488a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15852,7 +15908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Vending Machine
+  m_text: NexStar Vending
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b8cab9a70d44c842b8841bc7d3c6349, type: 2}
   m_sharedMaterial: {fileID: 2843826697776605231, guid: 2b8cab9a70d44c842b8841bc7d3c6349, type: 2}
@@ -16807,7 +16863,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4414242e9b611004f9157494af0bbcc8, type: 2}
+  - {fileID: 2100000, guid: 5ec8fca39dadc5948bbd6df0ed35488a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19776,7 +19832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5803281567702058103}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000028461216}
-  m_LocalPosition: {x: -0, y: 0.303, z: 0.94}
+  m_LocalPosition: {x: -0.00010000169, y: 0.38160005, z: 0.94039994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21669,7 +21725,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 756573636967329198, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1200
+      value: 1300
       objectReference: {fileID: 0}
     - target: {fileID: 756573636967329198, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: m_SizeDelta.y
@@ -21697,7 +21753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7475622471597304083, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7475622471597304084, guid: 63aed87357484224b8a7f69b301c5349, type: 3}
       propertyPath: m_Pivot.x
