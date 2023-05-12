@@ -53,8 +53,9 @@ public class VendingMachineManager : MonoBehaviour
 
     public void SpawnObject()
     {
+        Quaternion rotation = Quaternion.Euler(0, 0, -90f);
         Vector3 spawn = spawnArea.transform.position;
-        Instantiate(spawnObject, spawn, Quaternion.identity);
+        Instantiate(spawnObject, spawn, rotation);
 
         StartCoroutine(TurnOff(spawnObject));
     }
