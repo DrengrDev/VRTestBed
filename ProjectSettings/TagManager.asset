@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftHand
   - RightHand
+  - CardTrigger
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Grabbable Object
   - Hands
   - Player
-  - 
+  - FingerTip
   - 
   - 
   - 
