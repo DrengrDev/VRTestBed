@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HandGestureTest : MonoBehaviour
 {
-    public Image imageLeft, imageRight;
+    //public Image imageLeft, imageRight;
 
     Color color;
     private void Start()
@@ -13,14 +13,14 @@ public class HandGestureTest : MonoBehaviour
         color = Color.red;
     }
 
-    public void ChangeColorLeft()
+    public void ChangeColorLeft(Image image)
     {
-        imageLeft.color = Color.green;
+        image.color = Color.green;
     }
 
-    public void ChangeColorRight()
+    public void ChangeColorRight(Image image)
     {
-        imageRight.color = Color.green;
+        image.color = Color.green;
     }
 
     public void TurnColorBack(Image image)
