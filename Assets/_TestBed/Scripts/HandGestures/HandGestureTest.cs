@@ -13,12 +13,7 @@ public class HandGestureTest : MonoBehaviour
         color = Color.red;
     }
 
-    public void ChangeColorLeft(Image image)
-    {
-        image.color = Color.green;
-    }
-
-    public void ChangeColorRight(Image image)
+    public void ChangeColor(Image image)
     {
         image.color = Color.green;
     }
@@ -26,5 +21,15 @@ public class HandGestureTest : MonoBehaviour
     public void TurnColorBack(Image image)
     {
         image.color = color;
+    }
+
+    public void TurnOnText(GameObject g)
+    {
+        g.SetActive(true);
+    }
+
+    public void TurnOffText(GameObject g)
+    {
+        g.SetActive(false);
     }
 }
