@@ -14,7 +14,6 @@ public class CameraSwapManager : MonoBehaviour
     private void Awake()
     {
         camera1.transform.position = camPositions[0].transform.position;
-
         transforms = new Transform[camPositions.Length];
 
         for(int i = 0; i < camPositions.Length; i++)
@@ -31,10 +30,12 @@ public class CameraSwapManager : MonoBehaviour
         {
             index = 0;
             camera1.transform.position = transforms[index].position;
+            camera1.transform.rotation = transforms[index].rotation;
         }
         else
         {
             camera1.transform.position = transforms[index].position;
+            camera1.transform.rotation = transforms[index].rotation;
         }
     }
 }
