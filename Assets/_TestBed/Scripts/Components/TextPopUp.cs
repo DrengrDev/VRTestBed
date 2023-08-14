@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -9,6 +10,9 @@ namespace Oculus.Interaction
     {
         [SerializeField, Interface(typeof(IInteractableView))]
         private MonoBehaviour _interactableView;
+
+        [SerializeField]
+        private GameObject _canvasText;
 
         private IInteractableView InteractableView;
 
@@ -51,24 +55,26 @@ namespace Oculus.Interaction
             switch (InteractableView.State)
             {
                 case InteractableState.Hover:
-                    PopUpTextOn();
+                    PopUpTextOn(_canvasText);
                     break;
                 default:
-                    PopUpTextOff();
+                    PopUpTextOff(_canvasText);
                     break;
             }
         }
 
         private void UpdateVisualState(InteractableStateChangeArgs args) => UpdateVisual();
 
-        private void PopUpTextOn()
+        private void PopUpTextOn(GameObject g)
         {
             Debug.LogWarning("Pop up text has turned on");
+            g.SetActive(true);
         }
 
-        private void PopUpTextOff()
+        private void PopUpTextOff(GameObject g)
         {
             Debug.LogWarning ("Pop up text is off");
+            g.SetActive(false);
         }
     }
 }
