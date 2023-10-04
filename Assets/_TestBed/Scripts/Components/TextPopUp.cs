@@ -67,13 +67,11 @@ namespace Oculus.Interaction
 
         private void PopUpTextOn(GameObject g)
         {
-            Debug.LogWarning("Pop up text has turned on");
             g.SetActive(true);
         }
 
         private void PopUpTextOff(GameObject g)
         {
-            Debug.LogWarning ("Pop up text is off");
             g.SetActive(false);
         }
     }
